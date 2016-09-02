@@ -62,8 +62,15 @@ class AlbumsByLabelBrowser(AlbumsCategoryBrowser):
     sort_fields = ('label+')
 
     def _get_label(self, album):
-        out = '[{0}] {1} - {2}'.format(album.albumartist, album.name) 
+
+        # [cat] artist - relname (year)
+        out = '{1} - {2} ({3})'.format(
+            ' / '.join([artist.name for artist in album.artists])
+            , album.name
+            , album.original_year
+            ) 
+        
         if album.catalognum:
-            return '[{0}] {1}'.format(album.catalognum, out) 
+            return '[{0}] {1} '.format(album.catalognum, out) 
         else:
             return out
