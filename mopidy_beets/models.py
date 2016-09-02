@@ -3,8 +3,6 @@ from mopidy.models import Album, Artist, Track
 
 class BeetsAlbum(Album):
   added = None
-  album = None
-  albumartist = None
   albumartist_credit = None
   albumartist_sort  = None
   albumdisambig = None
