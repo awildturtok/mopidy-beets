@@ -86,7 +86,7 @@ def parse_album(data, api):
         'num_discs': 'disctotal',
         'date': lambda d: parse_date(d),
         'musicbrainz_id': 'mb_albumid',
-        'publisher' : 'label', 
+        'label' : 'publisher', 
         # TODO: 'images' is deprecated since v1.2 - move to Library.get_images
         'images': lambda d, api=api: _filter_none(
             [api.get_album_art_url(d['id'])]),
