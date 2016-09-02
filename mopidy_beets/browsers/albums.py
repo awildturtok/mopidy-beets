@@ -66,4 +66,7 @@ class AlbumsByLabelBrowser(AlbumsCategoryBrowser):
         # [cat] artist - relname (year)
         out = '{0} - {1}'.format(' / '.join([artist.name for artist in album.artists]), album.name) 
         
-        return (if album.catalognum: "[{0}]".format(album.catalognum) else "") + out
+        if album.catalognum:
+            out = "[{0}]".format(album.catalognum) + out
+
+        return out
