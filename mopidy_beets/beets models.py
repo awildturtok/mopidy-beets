@@ -1,6 +1,6 @@
 from mopidy.models import Album, Artist, Track
 
-class BeetsTrack(Track):
+#class BeetsTrack(Track):
 
 
 class BeetsAlbum(Album):
