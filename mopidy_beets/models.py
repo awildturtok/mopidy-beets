@@ -1,4 +1,4 @@
-from mopidy.models import Album, Artist, Track
+from mopidy.models import fields, Album, Artist, Track
 #class BeetsTrack(Track):
 
 class BeetsAlbum(Album):
