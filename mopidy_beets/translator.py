@@ -2,6 +2,7 @@ import logging
 import urllib
 
 from mopidy.models import Album, Artist, Track
+from mopidy_beets.models import BeetsAlbum
 
 
 logger = logging.getLogger(__name__)
