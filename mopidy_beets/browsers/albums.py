@@ -35,12 +35,12 @@ class AlbumsByGenreBrowser(AlbumsCategoryBrowser):
     sort_fields = ('albumartist', 'original_year+', 'year+', 'album+')
 
     def _get_label(self, album):
-        artists = ' / '.join([artist.name for artist in album.artists])
+        artists = u' / '.join([artist.name for artist in album.artists])
         if artists and album.date:
-            return '{0} - {1} ({2})'.format(artists, album.name,
+            return u'{0} - {1} ({2})'.format(artists, album.name,
                                             album.date.split('-')[0])
         elif artists:
-            return '{0} - {1}'.format(artists, album.name)
+            return u'{0} - {1}'.format(artists, album.name)
         else:
             return album.name
 
@@ -51,9 +51,9 @@ class AlbumsByYearBrowser(AlbumsCategoryBrowser):
                    'month+', 'day+', 'album+')
 
     def _get_label(self, album):
-        artists = ' / '.join([artist.name for artist in album.artists])
+        artists = u' / '.join([artist.name for artist in album.artists])
         if artists:
-            return '{0} - {1}'.format(artists, album.name)
+            return u'{0} - {1}'.format(artists, album.name)
         else:
             return album.name
 
@@ -64,9 +64,9 @@ class AlbumsByLabelBrowser(AlbumsCategoryBrowser):
     def _get_label(self, album):
 
         # [cat] artist - relname (year)
-        out = '{0} - {1}'.format(' / '.join([artist.name for artist in album.artists]), album.name) 
+        out = u'{0} - {1}'.format(u' / '.join([artist.name for artist in album.artists]), album.name) 
         
         if album.catalognum:
-            out = "[{0}]".format(album.catalognum) + out
+            out = u'[{0}]'.format(album.catalognum) + out
 
         return out
