@@ -67,7 +67,7 @@ class AlbumsByLabelBrowser(AlbumsCategoryBrowser):
         out = '{1} - {2} ({3})'.format(
             ' / '.join([artist.name for artist in album.artists])
             , album.name
-            , album.original_year
+            , album.year
             ) 
         
         if album.catalognum:
