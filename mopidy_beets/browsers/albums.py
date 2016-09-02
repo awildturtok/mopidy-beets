@@ -2,7 +2,6 @@ from mopidy import models
 
 from mopidy_beets.browsers import GenericBrowserBase
 from mopidy_beets.translator import assemble_uri
-from mopidy_beets import BeetsAlbum
 
 
 class AlbumsCategoryBrowser(GenericBrowserBase):
