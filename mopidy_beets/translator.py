@@ -85,11 +85,13 @@ def parse_album(data, api):
         'num_discs': 'disctotal',
         'date': lambda d: parse_date(d),
         'musicbrainz_id': 'mb_albumid',
+        'publisher' : 'label', 
         # TODO: 'images' is deprecated since v1.2 - move to Library.get_images
         'images': lambda d, api=api: _filter_none(
             [api.get_album_art_url(d['id'])]),
+
     }
-    return _apply_beets_mapping(Album, mapping, data)
+    return _apply_beets_mapping(BeetsAlbum, mapping, data)
 
 
 def parse_track(data, api):
