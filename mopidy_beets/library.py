@@ -27,6 +27,7 @@ class BeetsLibraryProvider(backend.LibraryProvider):
         ('albums-by-artist', 'Albums by Artist', AlbumsByArtistBrowser),
         ('albums-by-genre', 'Albums by Genre', AlbumsByGenreBrowser),
         ('albums-by-year', 'Albums by Year', AlbumsByYearBrowser),
+        ('albums-by-label', 'Albums by Label', AlbumsByLabelBrowser),
     ]
 
     def __init__(self, *args, **kwargs):
