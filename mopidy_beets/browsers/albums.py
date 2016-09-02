@@ -64,9 +64,9 @@ class AlbumsByLabelBrowser(AlbumsCategoryBrowser):
     def _get_label(self, album):
 
         # [cat] artist - relname (year)
-        out = '{0} - {1} ({2})'.format(' / '.join([artist.name for artist in album.artists]), album.name, album.year) 
+        out = '{0} - {1}'.format(' / '.join([artist.name for artist in album.artists]), album.name) 
         
         if album.catalognum:
-            return '[{0}] {1} '.format(album.catalognum, out) 
+            return '[{0}] {1}'.format(album.catalognum, out) 
         else:
             return out
