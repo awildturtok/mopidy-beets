@@ -7,7 +7,7 @@ from mopidy import backend, models
 from mopidy.models import SearchResult
 
 from mopidy_beets.browsers.albums import (
-    AlbumsByArtistBrowser, AlbumsByGenreBrowser, AlbumsByYearBrowser)
+    AlbumsByArtistBrowser, AlbumsByGenreBrowser, AlbumsByYearBrowser, AlbumsByLabelBrowser)
 from mopidy_beets.translator import assemble_uri, parse_uri
 
 
