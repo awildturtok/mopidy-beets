@@ -59,7 +59,7 @@ class AlbumsByYearBrowser(AlbumsCategoryBrowser):
 
 class AlbumsByLabelBrowser(AlbumsCategoryBrowser):
     field = 'label'
-    sort_fields = ('label+')
+    sort_fields = ('publisher')
 
     def _get_label(self, album):
 
