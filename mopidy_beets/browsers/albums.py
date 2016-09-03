@@ -27,7 +27,7 @@ class AlbumsByArtistBrowser(AlbumsCategoryBrowser):
     sort_fields = ('original_year+', 'year+', 'album+')
 
     def _get_label(self, album):
-        return album.name
+        return u'' + album.name
 
 
 class AlbumsByGenreBrowser(AlbumsCategoryBrowser):
