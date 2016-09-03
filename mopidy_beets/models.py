@@ -10,5 +10,5 @@ class BeetsAlbum(Album):
   mb_albumartistid   = fields.String()
   mb_albumid         = fields.String()
   mb_releasegroupid  = fields.String()
-  rg_album_gain      = fields.Float()
-  rg_album_peak      = fields.Float()
+  rg_album_gain      = fields.Integer()
+  rg_album_peak      = fields.Integer()
