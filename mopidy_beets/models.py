@@ -2,24 +2,13 @@ from mopidy.models import fields, Album, Artist, Track
 #class BeetsTrack(Track):
 
 class BeetsAlbum(Album):
-  added = None
-  albumartist_credit = None
-  albumartist_sort  = None
-  albumdisambig = None
-  albumstatus = None
-  albumtotal  = None
-  albumtype   = None
-  artpath     = None
-  asin        = None
+  added = fields.Date()
+  albumartist_credit = fields.String()
+  albumartist_sort  = fields.String()
+  albumtype   = fields.String()
   catalognum  = fields.String()
-  comp        = None
-  country     = None
-  disctotal   = None
-  language    = None
-  mb_albumartistid   = None
-  mb_albumid         = None
-  mb_releasegroupid  = None
-  month              = None
-  rg_album_gain      = None
-  rg_album_peak      = None
-  script             = None
+  mb_albumartistid   = fields.String()
+  mb_albumid         = fields.String()
+  mb_releasegroupid  = fields.String()
+  rg_album_gain      = fields.Float()
+  rg_album_peak      = fields.Float()
